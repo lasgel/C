@@ -244,11 +244,14 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>angle between \(\vec{a}\) and \(\vec{b}\) in radians </dd></dl>
+<p>&lt; The norm of vector a</p>
+<p>&lt; The norm of vector b</p>
+<p>detect possible division by 0 - the angle is not defined in this case</p>
 <div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;{</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="keywordtype">double</span> alpha, cos_alpha;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">float</span> norm_a = <a class="code" href="../../de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de">vector_norm</a>(a); <span class="comment">//calc norm of vec a</span></div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">float</span> norm_b = <a class="code" href="../../de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de">vector_norm</a>(b); <span class="comment">//calc norm of vec b</span></div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">if</span> (fabsf(norm_a) &lt; <a class="code" href="../../de/d5a/group__quaternions.html#ga002b2f4894492820fe708b1b7e7c5e70">EPSILON</a> || fabsf(norm_b) &lt; <a class="code" href="../../de/d5a/group__quaternions.html#ga002b2f4894492820fe708b1b7e7c5e70">EPSILON</a>) <span class="comment">// detect possible division by 0 - the angle is not defined in this case</span></div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    <span class="keywordtype">float</span> norm_a = <a class="code" href="../../de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de">vector_norm</a>(a); <span class="comment">///&lt; The norm of vector a</span></div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    <span class="keywordtype">float</span> norm_b = <a class="code" href="../../de/d7b/group__vec__3d.html#ga94805165d037d111d7d7c0df99e3a5de">vector_norm</a>(b); <span class="comment">///&lt; The norm of vector b</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordflow">if</span> (fabsf(norm_a) &lt; <a class="code" href="../../de/d5a/group__quaternions.html#ga002b2f4894492820fe708b1b7e7c5e70">EPSILON</a> || fabsf(norm_b) &lt; <a class="code" href="../../de/d5a/group__quaternions.html#ga002b2f4894492820fe708b1b7e7c5e70">EPSILON</a>) <span class="comment">/// detect possible division by 0 - the angle is not defined in this case</span></div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    {  </div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keywordflow">return</span> NAN; </div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    }</div>
